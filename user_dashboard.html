@@ -28,7 +28,6 @@
                 <img src="images/logo.png" alt="STACKLY Logo" style="height: 40px; width: auto;">
             </div>
             <span style="color: #FFFF66; font-weight: 800; font-size: 1.5rem; letter-spacing: 1px; margin-left: 10px; vertical-align: middle;">STACKLY</span>
-            <span class="badge badge-active" id="displayName" style="margin-left: 10px;">USER</span>
         </a>
         <div class="topbar-actions">
             <span id="displayEmail" style="color: var(--primary); font-weight: 500; font-size: 0.95rem;"></span>
@@ -58,7 +57,7 @@
         <!-- Main Dashboard Content -->
         <main class="dashboard-main" data-aos="fade-up" data-aos-delay="100">
             <div class="dashboard-header">
-                <h1 class="premium-title">Welcome back, <span class="gradient-text">Alex</span></h1>
+                <h1 class="premium-title">Welcome back, <span class="gradient-text" id="welcomeName">Alex</span></h1>
                 <p>Here is what's happening with your account today.</p>
             </div>
 
@@ -131,9 +130,11 @@
             const email = localStorage.getItem('userEmail');
             
             if (name) {
-                document.getElementById('displayName').innerText = name.toUpperCase();
+                const welcomeEl = document.getElementById('welcomeName');
+                if(welcomeEl) welcomeEl.innerText = name;
             } else {
-                document.getElementById('displayName').innerText = 'USER';
+                const welcomeEl = document.getElementById('welcomeName');
+                if(welcomeEl) welcomeEl.innerText = 'User';
             }
             
             if (email) {

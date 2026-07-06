@@ -299,12 +299,12 @@ body {
     #displayName {
         display: none !important;
     }
-    .topbar-actions span#displayEmail {
-        display: block;
-    }
 }
 
 @media (max-width: 768px) {
+    .topbar-actions span#displayEmail {
+        display: none !important;
+    }
     .stats-grid {
         grid-template-columns: 1fr;
     }
