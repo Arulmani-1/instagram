@@ -313,6 +313,10 @@
 }
 
 @media (max-width: 768px) {
+    .container.social-layout {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .social-layout {
         grid-template-columns: 1fr;
         padding-top: 80px;
@@ -320,8 +324,19 @@
     .social-sidebar {
         display: none;
     }
-    .post-header { padding: 1rem; }
-    .post-actions-bar { padding: 1rem; }
+    .feed-container {
+        gap: 0;
+    }
+    .dark-card {
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 0 !important;
+        margin-bottom: 15px !important;
+    }
+    .stories-tray {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (max-width: 480px) {
