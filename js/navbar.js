@@ -67,6 +67,8 @@
 
     // Set active link based on current page URL
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Desktop nav items
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
         const itemPath = item.getAttribute('href');
@@ -74,6 +76,17 @@
             item.classList.add('active');
         } else {
             item.classList.remove('active');
+        }
+    });
+
+    // Mobile nav items
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    mobileNavItems.forEach(item => {
+        const itemPath = item.getAttribute('href');
+        if (itemPath && (currentPath === itemPath || (currentPath === 'index.html' && itemPath === 'home.html'))) {
+            item.classList.add('active-link');
+        } else {
+            item.classList.remove('active-link');
         }
     });
 })();
