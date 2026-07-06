@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACKLY Blog | Insights & News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/loader.js"></script>
+</head>
+<body>
+    <div class="reading-progress"></div>
+
+    <div class="stackly-background">
+        <div class="ambient-light light-1"></div>
+    </div>
+
+    <!-- Component Placeholders -->
+    <div id="navbar-placeholder"></div>
+
+    <main id="content">
+        <!-- Blog Header -->
+        <section class="section blog-header">
+            <div class="container">
+                <h1 class="premium-title slide-up">Latest <span class="gradient-text">Insights</span></h1>
+                <p class="section-subtitle slide-up delay-1" style="margin-left: 0; text-align: left;">Discover the latest trends in technology, social media, and enterprise innovation.</p>
+                
+                <div class="blog-filters slide-up delay-2">
+                    <form class="search-bar glass-panel" onsubmit="event.preventDefault(); window.location.href='404.html'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="cursor: pointer;" onclick="window.location.href='404.html'"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" placeholder="Search articles...">
+                    </form>
+                    <div class="categories">
+                        <button class="category-btn active" onclick="window.location.href='404.html'">All</button>
+                        <button class="category-btn" onclick="window.location.href='404.html'">Technology</button>
+                        <button class="category-btn" onclick="window.location.href='404.html'">AI</button>
+                        <button class="category-btn" onclick="window.location.href='404.html'">Creators</button>
+                        <button class="category-btn" onclick="window.location.href='404.html'">Business</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="section pt-0">
+            <div class="container">
+                <div class="featured-post glass-card slide-up">
+                    <div class="featured-image"></div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="category-tag">Artificial Intelligence</span>
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 8 min read</span>
+                        </div>
+                        <h2>The Future of Machine Learning in Enterprise Social Networks</h2>
+                        <p>How predictive algorithms are reshaping the way professionals connect, collaborate, and discover content on a global scale.</p>
+                        
+                        <div class="author-card">
+                            <div class="author-avatar author-1"></div>
+                            <div class="author-info">
+                                <h4>Dr. Emily Chen</h4>
+                                <span>Head of AI Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Articles Grid -->
+        <section class="section pt-0">
+            <div class="container blog-layout">
+                
+                <div class="main-articles">
+                    <h3 class="section-title text-left slide-up" style="font-size: 2rem;">Recent Articles</h3>
+                    <div class="articles-grid">
+                        <!-- Article 1 -->
+                        <div class="blog-card glass-card zoom-out-up delay-1">
+                            <div class="blog-image img-1"></div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="category-tag">Creators</span>
+                                    <span class="read-time">5 min read</span>
+                                </div>
+                                <h4>Monetization Strategies for the Modern Creator Economy</h4>
+                                <p>Discover how top creators are leveraging diverse revenue streams to build sustainable businesses.</p>
+                                <div class="author-sm">By Alex Rivera</div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="blog-card glass-card zoom-out-up delay-2">
+                            <div class="blog-image img-2"></div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="category-tag">Technology</span>
+                                    <span class="read-time">6 min read</span>
+                                </div>
+                                <h4>Building Resilient Distributed Systems</h4>
+                                <p>A deep dive into the architecture that powers STACKLY's 99.99% global uptime.</p>
+                                <div class="author-sm">By James Chen</div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="blog-card glass-card zoom-out-up delay-1">
+                            <div class="blog-image img-3"></div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="category-tag">Marketing</span>
+                                    <span class="read-time">4 min read</span>
+                                </div>
+                                <h4>B2B Brand Building in 2026</h4>
+                                <p>Why community-led growth is outperforming traditional outbound marketing strategies.</p>
+                                <div class="author-sm">By Sarah Mitchell</div>
+                            </div>
+                        </div>
+
+                        <!-- Article 4 -->
+                        <div class="blog-card glass-card zoom-out-up delay-2">
+                            <div class="blog-image img-4"></div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="category-tag">Social Media</span>
+                                    <span class="read-time">7 min read</span>
+                                </div>
+                                <h4>The Evolution of Video Content</h4>
+                                <p>Analyzing engagement metrics across short-form reels and long-form live streams.</p>
+                                <div class="author-sm">By Marcus Doe</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-glass" onclick="window.location.href='404.html'">Load More Articles</button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget glass-card slide-up">
+                        <h4>Popular Articles</h4>
+                        <ul class="popular-list">
+                            <li>
+                                <a href="#">Understanding Web3 Integration in Social Platforms</a>
+                                <span>3 days ago</span>
+                            </li>
+                            <li>
+                                <a href="#">Top 10 Tools for Digital Nomads</a>
+                                <span>1 week ago</span>
+                            </li>
+                            <li>
+                                <a href="#">How to Optimize Your Profile for B2B Leads</a>
+                                <span>2 weeks ago</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget glass-card slide-up delay-1">
+                        <h4>Subscribe to Newsletter</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary);">Get weekly insights delivered straight to your inbox.</p>
+                        <button type="button" class="btn btn-glass" id="email-reveal-btn" style="width: 100%; margin-top: 10px;">Email</button>
+                        <form class="sidebar-newsletter" id="newsletter-form" style="display: none; margin-top: 15px;" onsubmit="event.preventDefault(); alert('email subscription successfully'); this.reset(); document.getElementById('newsletter-form').style.display='none'; document.getElementById('email-reveal-btn').style.display='block';">
+                            <input type="email" placeholder="Email address" required style="width: 100%;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Subscribe</button>
+                        </form>
+                        <script>
+                            document.getElementById('email-reveal-btn').addEventListener('click', function() {
+                                this.style.display = 'none';
+                                const form = document.getElementById('newsletter-form');
+                                form.style.display = 'block';
+                                form.querySelector('input').focus();
+                            });
+                        </script>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Component Placeholders -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Reading Progress Bar
+        document.addEventListener('scroll', () => {
+            const docElem = document.documentElement;
+            const docBody = document.body;
+            const scrollTop = docElem['scrollTop'] || docBody['scrollTop'];
+            const scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
+            const scrollPercent = scrollTop / scrollBottom * 100 + '%';
+            
+            document.querySelector('.reading-progress').style.width = scrollPercent;
+        });
+    </script>
+</body>
+</html>

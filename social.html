@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACKLY | Premium Social Feed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/social.css">
+    <script src="js/loader.js"></script>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline id="bg-video" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.2) sepia(0.5) hue-rotate(100deg);">
+        <source src="videos/bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main id="content">
+        <div class="container social-layout">
+            
+            <!-- Left Sidebar -->
+            <aside class="social-sidebar fade-right">
+                <div class="glass-panel profile-card">
+                    <div class="profile-avatar">
+                        <img src="images/post1.png" alt="Profile" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <h3 class="profile-name">Alex Carter</h3>
+                    <p class="profile-bio">Enterprise Tech Leader | AI Enthusiast</p>
+                    <div class="profile-stats">
+                        <div class="stat"><span class="stat-num">1.2K</span>Posts</div>
+                        <div class="stat"><span class="stat-num">45K</span>Followers</div>
+                        <div class="stat"><span class="stat-num">320</span>Following</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Feed -->
+            <div class="feed-container">
+                <!-- Stories Tray -->
+                <div class="stories-tray fade-up">
+                    <div class="stories-scroll">
+                        <div class="story-item">
+                            <div class="story-avatar">
+                                <img src="images/post1.png" alt="aiwithanju">
+                            </div>
+                            <span class="story-username">aiwithanju</span>
+                        </div>
+                        <div class="story-item">
+                            <div class="story-ring">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop" alt="cmotamiln...">
+                            </div>
+                            <span class="story-username">cmotamiln...</span>
+                        </div>
+                        <div class="story-item">
+                            <div class="story-avatar">
+                                <img src="images/post2.png" alt="it_jobs_4u">
+                            </div>
+                            <span class="story-username">it_jobs_4u</span>
+                        </div>
+                        <div class="story-item">
+                            <div class="story-avatar">
+                                <img src="images/post3.png" alt="ascent24te...">
+                            </div>
+                            <span class="story-username">ascent24te...</span>
+                        </div>
+                        <div class="story-item">
+                            <div class="story-avatar">
+                                <img src="images/post4.png" alt="aravind03....">
+                            </div>
+                            <span class="story-username">aravind03....</span>
+                        </div>
+                        <div class="story-item">
+                            <div class="story-avatar">
+                                <img src="images/post5.png" alt="jeni_dubai...">
+                            </div>
+                            <span class="story-username">jeni_dubai...</span>
+                        </div>
+                    </div>
+                    <button class="story-nav right-arrow">&gt;</button>
+                </div>
+
+                
+                <!-- Card 1: tech_insider -->
+                <div class="feed-post dark-card fade-up">
+                    <div class="post-header">
+                        <div class="post-author">
+                            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                            <div class="author-info">
+                                <h4>tech_insider</h4>
+                                <p class="post-location">Silicon Valley</p>
+                            </div>
+                        </div>
+                        <div class="options-diamonds">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2l4 10-4 10-4-10z" fill="currentColor" opacity="0.7"/><path d="M18 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/><path d="M6 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/></svg>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" class="post-media" alt="Tech Insider Post">
+                    <div class="post-actions-bar">
+                        <div class="action-group">
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.7 0l-1.1 1-1.1-1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.9-7.5 1-1.1a5.5 5.5 0 00-.1-7.8z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </div>
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                    </div>
+                    <div class="post-likes">9,873 likes</div>
+                    <div class="post-caption"><b>tech_insider</b> Just got my hands on this concept holographic interface. The future is now! ?? #tech #concept #gadgets</div>
+                    <div class="post-comments-preview">View all 156 comments</div>
+                    <div class="post-time">12 HOURS AGO</div>
+                </div>
+
+                <!-- Card 2: neon_nights -->
+                <div class="feed-post dark-card fade-up">
+                    <div class="post-header">
+                        <div class="post-author">
+                            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                            <div class="author-info">
+                                <h4>neon_nights</h4>
+                                <p class="post-location">Tokyo, Japan</p>
+                            </div>
+                        </div>
+                        <div class="options-diamonds">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2l4 10-4 10-4-10z" fill="currentColor" opacity="0.7"/><path d="M18 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/><path d="M6 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/></svg>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=800" class="post-media" alt="Neon Nights Post">
+                    <div class="post-actions-bar">
+                        <div class="action-group">
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.7 0l-1.1 1-1.1-1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.9-7.5 1-1.1a5.5 5.5 0 00-.1-7.8z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </div>
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                    </div>
+                    <div class="post-likes">22,109 likes</div>
+                    <div class="post-caption"><b>neon_nights</b> The rain always makes the neon pop more. Cyberpunk vibes tonight. ??? #tokyo #cyberpunk #photography</div>
+                    <div class="post-comments-preview">View all 843 comments</div>
+                    <div class="post-time">6 HOURS AGO</div>
+                </div>
+
+                <!-- Card 3: design_pro -->
+                <div class="feed-post dark-card fade-up">
+                    <div class="post-header">
+                        <div class="post-author">
+                            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                            <div class="author-info">
+                                <h4>design_pro <svg class="verified-badge" width="14" height="14" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.1 14.6l-4.2-4.2 1.4-1.4 2.8 2.8 6.4-6.4 1.4 1.4-7.8 7.8z"/></svg></h4>
+                                <p class="post-location">London, UK</p>
+                            </div>
+                        </div>
+                        <div class="options-diamonds">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2l4 10-4 10-4-10z" fill="currentColor" opacity="0.7"/><path d="M18 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/><path d="M6 12l2 5-2 5-2-5z" fill="currentColor" opacity="0.4"/></svg>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800" class="post-media" alt="Design Pro Post">
+                    <div class="post-actions-bar">
+                        <div class="action-group">
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.7 0l-1.1 1-1.1-1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.9-7.5 1-1.1a5.5 5.5 0 00-.1-7.8z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </div>
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                    </div>
+                    <div class="post-likes">18,521 likes</div>
+                    <div class="post-caption"><b>design_pro</b> Wireframing the new mobile app. The curved monitor makes multitasking so much easier. ?? #ui #ux #design</div>
+                    <div class="post-comments-preview">View all 214 comments</div>
+                    <div class="post-time">1 DAY AGO</div>
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="trending-sidebar fade-left">
+                <!-- Trending Topics -->
+                <div class="glass-panel trending-card">
+                    <h3>Trending Now</h3>
+                    <div class="trend-item">
+                        <span class="trend-topic">Technology</span>
+                        <span class="trend-name">#ArtificialIntelligence</span>
+                        <span class="trend-posts">1.5M posts</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-topic">Business</span>
+                        <span class="trend-name">Enterprise Solutions</span>
+                        <span class="trend-posts">850K posts</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-topic">Design</span>
+                        <span class="trend-name">Glassmorphism</span>
+                        <span class="trend-posts">420K posts</span>
+                    </div>
+                </div>
+
+                <!-- Suggested Users -->
+                <div class="glass-panel trending-card">
+                    <h3>Suggested for you</h3>
+                    <div class="suggestion-item">
+                        <div class="suggestion-info">
+                            <img src="images/post4.png" class="suggestion-avatar" alt="User">
+                            <div>
+                                <span class="suggestion-name">Vanisri Anandan</span>
+                                <span class="suggestion-reason">Followed by divyaprasanth23</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="suggestion-info">
+                            <img src="images/post5.png" class="suggestion-avatar" alt="User">
+                            <div>
+                                <span class="suggestion-name">Dev Mahadev</span>
+                                <span class="suggestion-reason">Suggested for you</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">Follow</button>
+                    </div>
+                </div>
+            </aside>
+            
+        </div>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const icons = document.querySelectorAll('.action-icon, .feed-image svg, .story-nav');
+            icons.forEach(icon => {
+                icon.style.cursor = 'pointer';
+                icon.addEventListener('click', () => {
+                    window.location.href = '404.html';
+                });
+            });
+
+            const followButtons = document.querySelectorAll('.suggestion-item .btn');
+            followButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    window.location.href = '404.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

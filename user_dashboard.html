@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - STACKLY</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user_dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/loader.js"></script>
+</head>
+
+<body>
+    <!-- Global Background FX -->
+    <div class="stackly-background">
+        <div class="ambient-light light-1" style="top: -10%; right: -5%;"></div>
+        <div class="ambient-light light-2" style="bottom: -10%; left: -5%;"></div>
+    </div>
+
+    <!-- Dashboard Topbar -->
+    <header class="dashboard-topbar">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+        <a href="home.html" class="topbar-logo" style="text-decoration: none; display: flex; align-items: center;">
+            <div style="width: 26px; height: 40px; overflow: hidden; display: inline-block; vertical-align: middle;">
+                <img src="images/logo.png" alt="STACKLY Logo" style="height: 40px; width: auto;">
+            </div>
+            <span style="color: #FFFF66; font-weight: 800; font-size: 1.5rem; letter-spacing: 1px; margin-left: 10px; vertical-align: middle;">STACKLY</span>
+            <span class="badge badge-active" id="displayName" style="margin-left: 10px;">USER</span>
+        </a>
+        <div class="topbar-actions">
+            <span id="displayEmail" style="color: var(--primary); font-weight: 500; font-size: 0.95rem;"></span>
+            <button class="btn btn-primary" onclick="handleLogout()" style="padding: 8px 15px; font-size: 1rem;" title="Logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+
+
+
+
+            <ul class="sidebar-nav">
+                <li><a href="user_dashboard.html" data-page="dashboard" class="active"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
+                <li><a href="404.html" data-page="profile"><i class="fa-solid fa-user"></i> My Profile</a></li>
+                <li><a href="404.html" data-page="notifications"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+                <li><a href="404.html" data-page="security"><i class="fa-solid fa-shield-halved"></i> Security</a></li>
+                <li><a href="404.html" data-page="settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+            </ul>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main" data-aos="fade-up" data-aos-delay="100">
+            <div class="dashboard-header">
+                <h1 class="premium-title">Welcome back, <span class="gradient-text">Alex</span></h1>
+                <p>Here is what's happening with your account today.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="stat-info">
+                        <h3>1,284</h3>
+                        <p>Total Views</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <div class="stat-info">
+                        <h3>24</h3>
+                        <p>New Messages</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="stat-info">
+                        <h3>98%</h3>
+                        <p>Profile Completion</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <h3 class="dashboard-section-title"><i class="fa-solid fa-clock-rotate-left"></i> Recent Activity</h3>
+            <div class="activity-feed">
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="activity-content">
+                        <h4>Account Verified</h4>
+                        <p>Your email address has been successfully verified.</p>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--primary);"><i class="fa-solid fa-star"></i></div>
+                    <div class="activity-content">
+                        <h4>Upgraded to Pro</h4>
+                        <p>You have successfully upgraded your subscription to the Pro Tier.</p>
+                        <span class="activity-time">Yesterday</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon" style="background: rgba(234, 67, 53, 0.1); color: #EA4335;"><i class="fa-solid fa-shield-virus"></i></div>
+                    <div class="activity-content">
+                        <h4>New Login Detected</h4>
+                        <p>A new login was detected from Chrome on Windows.</p>
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- No standard footer on dashboard -->
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+
+        // Load user info on dashboard load
+        window.onload = function() {
+            const name = localStorage.getItem('userName');
+            const email = localStorage.getItem('userEmail');
+            
+            if (name) {
+                document.getElementById('displayName').innerText = name.toUpperCase();
+            } else {
+                document.getElementById('displayName').innerText = 'USER';
+            }
+            
+            if (email) {
+                document.getElementById('displayEmail').innerText = email;
+            }
+        };
+
+        // Logout function
+        function handleLogout() {
+            localStorage.removeItem('userEmail');
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+
+</html>

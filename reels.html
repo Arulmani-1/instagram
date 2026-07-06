@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels - SOCIALLY</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reels.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/loader.js"></script>
+</head>
+<body>
+    <div class="zero-gravity-bg" id="parallax-bg">
+        <div class="bg-gradient"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <header class="top-nav" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-brands fa-space-awesome floating-icon-slow"></i></div>
+                <span class="logo-text">SOCIALLY</span>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="home.html" class="nav-item">Home</a>
+                <a href="reels.html" class="nav-item active">Reels</a>
+                <a href="messages.html" class="nav-item">Messages</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="blog.html" class="nav-item">Blog</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box glass-element">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search universe...">
+                </div>
+                <button class="create-btn glass-btn premium-hover"><i class="fa-solid fa-plus"></i> <span>Create</span></button>
+                <div class="notification-icon hover-lift">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="badge pulse">3</span>
+                </div>
+                <div class="profile-avatar premium-border">
+                    <img src="https://i.pravatar.cc/150?img=68" alt="Profile">
+                </div>
+                <button class="login-btn outline-btn premium-hover" onclick="window.location.href='login.html'">Login</button>
+                <div class="mobile-menu-btn" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer glass-panel" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-brands fa-space-awesome"></i></div>
+                <span class="logo-text">SOCIALLY</span>
+            </div>
+            <button class="close-drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="drawer-links">
+            <a href="home.html" class="drawer-item"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="reels.html" class="drawer-item active"><i class="fa-solid fa-video"></i> Reels</a>
+            <a href="messages.html" class="drawer-item"><i class="fa-solid fa-message"></i> Messages</a>
+            <a href="services.html" class="drawer-item"><i class="fa-solid fa-briefcase"></i> Services</a>
+            <a href="blog.html" class="drawer-item"><i class="fa-solid fa-newspaper"></i> Blog</a>
+            <a href="about.html" class="drawer-item"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            <a href="contact.html" class="drawer-item"><i class="fa-solid fa-address-book"></i> Contact</a>
+            <a href="login.html" class="drawer-item"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </nav>
+    </div>
+
+    <main class="app-container">
+        <section id="reels" class="page-section">
+            <div class="reels-container">
+                <!-- Reel 1 -->
+                <div class="reel-item">
+                    <div class="reel-video placeholder-video gradient-bg-1">
+                        <div class="play-indicator floating-fast"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="reel-overlay">
+                        <div class="reel-info">
+                            <div class="reel-user">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="User">
+                                <h4>sarah.dev <i class="fa-solid fa-circle-check verified"></i></h4>
+                                <button class="glass-btn follow-btn-small">Follow</button>
+                            </div>
+                            <p class="reel-caption">Building the impossible in 3D CSS 🌌 #coding #css3 #webdev</p>
+                            <div class="reel-music">
+                                <i class="fa-solid fa-music music-spin"></i>
+                                <span>Original Audio - sarah.dev</span>
+                            </div>
+                        </div>
+                        <div class="reel-actions">
+                            <div class="action-item hover-lift like-burst">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>1.2M</span>
+                            </div>
+                            <div class="action-item hover-lift">
+                                <i class="fa-solid fa-comment"></i>
+                                <span>45K</span>
+                            </div>
+                            <div class="action-item hover-lift">
+                                <i class="fa-solid fa-share"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="action-item hover-lift">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="action-item audio-track spin">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Audio">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reels-floating-controls glass-panel">
+                <button class="control-btn"><i class="fa-solid fa-volume-high"></i></button>
+                <button class="control-btn"><i class="fa-solid fa-camera"></i></button>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

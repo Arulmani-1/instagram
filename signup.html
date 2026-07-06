@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - STACKLY</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/loader.js"></script>
+</head>
+
+<body>
+    <div class="zero-gravity-bg" id="parallax-bg">
+        <div class="bg-gradient"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="app-container">
+        <section id="login" class="page-section login-layout"
+            style="opacity: 1; visibility: visible; position: relative; padding-top: 180px; padding-bottom: 120px; min-height: 100vh; box-sizing: border-box;">
+            <div class="login-card glass-panel premium-border float-container" data-aos="fade-up-left" data-aos-duration="1000">
+                <div class="login-header">
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                        <div style="width: 36px; height: 55px; overflow: hidden; display: inline-block; vertical-align: middle;">
+                            <img src="images/logo.png" alt="STACKLY Logo" style="height: 55px; width: auto;">
+                        </div>
+                        <span style="color: #FFFF66; font-weight: 800; font-size: 2.2rem; letter-spacing: 1px; margin-left: 15px; vertical-align: middle;">STACKLY</span>
+                    </div>
+                    <h2 class="premium-text">Create Account</h2>
+                </div>
+
+                <form class="login-form">
+                    <div class="form-group mb-3">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-users"></i>
+                            <select class="glass-input role-select">
+                                <option value="" disabled selected>Select Role...</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="signupName" class="glass-input" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="signupEmail" class="glass-input" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" class="glass-input" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" class="glass-input" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary w-100 mt-4" onclick="handleSignup()">
+                        Create Account
+                    </button>
+                </form>
+
+                <div class="login-divider"><span>OR</span></div>
+
+                <div class="social-logins" style="display: flex; gap: 15px; width: 100%;">
+                    <button class="btn btn-glass" style="flex: 1; justify-content: center;" onclick="window.location.href='404.html'"><i class="fa-brands fa-google text-red"></i> Google</button>
+                    <button class="btn btn-glass" style="flex: 1; justify-content: center;" onclick="window.location.href='404.html'"><i class="fa-brands fa-facebook text-blue"></i> Facebook</button>
+                </div>
+
+                <p class="signup-link mt-4 text-center">Already have an account? <a href="login.html">Login</a></p>
+            </div>
+
+            <div class="login-3d-illustration parallax-layer" data-speed="0.08">
+                <div class="illustration-orb orb-large floating-slow"></div>
+                <div class="illustration-orb orb-medium floating-medium"></div>
+                <div class="illustration-orb orb-small floating-fast"></div>
+                <div class="glass-card-mockup float-mockup" style="padding: 15px;">
+                    <img src="images/2.png" alt="App Dashboard Mockup" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50
+        });
+
+        function handleSignup() {
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            if (name) localStorage.setItem('userName', name);
+            if (email) localStorage.setItem('userEmail', email);
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

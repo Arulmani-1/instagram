@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | STACKLY</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/404.css">
+    <script src="js/loader.js"></script>
+</head>
+<body>
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main id="content">
+        <section class="error-section">
+            
+            <!-- Dynamic Particles Background -->
+            <div class="particles">
+                <div class="ambient-light light-1" style="top: 20%; left: 30%; width: 30vw; height: 30vw; opacity: 0.5;"></div>
+                <div class="ambient-light light-2" style="bottom: 20%; right: 30%; width: 40vw; height: 40vw; opacity: 0.3;"></div>
+            </div>
+
+            <div class="container">
+                <div class="error-content fade-in">
+                    <div class="glitch-wrapper">
+                        <h1 class="error-code">404</h1>
+                    </div>
+                    <h2 class="error-title">Page Not Found</h2>
+                    <p class="error-message">You've ventured into uncharted territory. The page you're looking for doesn't exist or has been moved to another dimension.</p>
+                    
+                    <div class="error-actions">
+                        <a href="#" onclick="goBackWithLoader(); return false;" class="btn-404-outline">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> GO BACK
+                        </a>
+                        <a href="home.html" class="btn-404-solid">
+                            GO TO DASHBOARD <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-left: 8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        function goBackWithLoader() {
+            const loader = document.getElementById("stackly-global-loader");
+            if(loader) {
+                loader.style.visibility = "visible";
+                loader.style.opacity = "1";
+                document.body.classList.add("is-loading");
+            }
+            setTimeout(() => {
+                history.back();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACKLY | Messages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/loader.js"></script>
+</head>
+<body style="background-color: transparent !important;">
+    
+    <!-- Background FX -->
+    <div class="stackly-background parallax" data-speed="0.2" style="background: transparent;">
+        <div class="ambient-light light-1"></div>
+        <div class="ambient-light light-2"></div>
+    </div>
+
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main id="content" style="padding-top: 120px;">
+        <div class="container" style="max-width: 1400px; padding: 0 20px;">
+            <div class="messages-container glass-panel">
+                <div class="messages-sidebar">
+                    <div class="messages-header">
+                        <h2>Messages</h2>
+                        <button class="icon-btn hover-lift"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </div>
+                    <div class="messages-search search-box glass-element">
+                        <i class="fa-solid fa-search" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="text" placeholder="Search messages...">
+                    </div>
+                    <div class="conversation-list">
+                        <div class="conversation-item active hover-lift">
+                            <div class="conv-avatar">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Sarah">
+                                <span class="online-status"></span>
+                            </div>
+                            <div class="conv-info">
+                                <h4>Sarah Jenkins</h4>
+                                <p class="typing-text">Typing...</p>
+                            </div>
+                            <div class="conv-meta">
+                                <span>Just now</span>
+                            </div>
+                        </div>
+                        <div class="conversation-item hover-lift">
+                            <div class="conv-avatar">
+                                <img src="https://i.pravatar.cc/150?img=11" alt="David">
+                            </div>
+                            <div class="conv-info">
+                                <h4>David Miller</h4>
+                                <p>Are we still on for the meet...</p>
+                            </div>
+                            <div class="conv-meta">
+                                <span>10:32 AM</span>
+                            </div>
+                        </div>
+                        <div class="conversation-item hover-lift">
+                            <div class="conv-avatar">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Emily">
+                                <span class="online-status"></span>
+                            </div>
+                            <div class="conv-info">
+                                <h4>Emily Chen</h4>
+                                <p>Sent an attachment</p>
+                            </div>
+                            <div class="conv-meta">
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="conversation-item hover-lift">
+                            <div class="conv-avatar">
+                                <img src="https://i.pravatar.cc/150?img=68" alt="Alex">
+                            </div>
+                            <div class="conv-info">
+                                <h4>Alex Johnson</h4>
+                                <p>Haha that's so funny! 😂</p>
+                            </div>
+                            <div class="conv-meta">
+                                <span>Mon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-window">
+                    <div class="chat-header">
+                        <div class="chat-user-info">
+                            <img src="https://i.pravatar.cc/150?img=47" alt="Sarah">
+                            <div>
+                                <h4>Sarah Jenkins</h4>
+                                <span class="status-text">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages">
+                        <div class="message-group received">
+                            <div class="message pop-animation">
+                                <div class="msg-bubble glass-element">
+                                    Hey! Did you check out the new design system?
+                                </div>
+                            </div>
+                            <div class="msg-time">10:45 AM</div>
+                        </div>
+                        
+                        <div class="message-group sent">
+                            <div class="message pop-animation" style="animation-delay: 0.1s">
+                                <div class="msg-bubble gradient-bg-purple">
+                                    Yes! It looks amazing. The glassmorphism effects are really premium. 🚀
+                                </div>
+                            </div>
+                            <div class="msg-time">10:47 AM</div>
+                        </div>
+                        
+                        <div class="message-group received">
+                            <div class="message pop-animation" style="animation-delay: 0.2s">
+                                <div class="msg-bubble glass-element">
+                                    I know right? I'm integrating it into the dashboard right now.
+                                </div>
+                            </div>
+                            <div class="msg-time">10:48 AM</div>
+                        </div>
+                        
+                        <div class="message-group received">
+                            <div class="message pop-animation" style="animation-delay: 0.3s">
+                                <div class="msg-bubble glass-element typing-bubble">
+                                    <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-area">
+                        <button class="icon-btn hover-lift" onclick="window.location.href='404.html'"><i class="fa-solid fa-plus"></i></button>
+                        <button class="icon-btn hover-lift" onclick="window.location.href='404.html'"><i class="fa-regular fa-image"></i></button>
+                        <div class="input-wrapper glass-element">
+                            <input type="text" placeholder="Type a message...">
+                        </div>
+                        <button class="icon-btn hover-lift" onclick="window.location.href='404.html'"><i class="fa-solid fa-microphone"></i></button>
+                        <button class="icon-btn send-btn hover-lift" onclick="window.location.href='404.html'"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

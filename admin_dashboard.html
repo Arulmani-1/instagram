@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - STACKLY</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user_dashboard.css">
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/loader.js"></script>
+</head>
+
+<body>
+    <!-- Global Background FX -->
+    <div class="stackly-background">
+        <div class="ambient-light light-1" style="top: -10%; right: -5%;"></div>
+        <div class="ambient-light light-2" style="bottom: -10%; left: -5%;"></div>
+    </div>
+
+    <!-- Dashboard Topbar -->
+    <header class="dashboard-topbar">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+        <a href="home.html" class="topbar-logo" style="text-decoration: none; display: flex; align-items: center;">
+            <div style="width: 26px; height: 40px; overflow: hidden; display: inline-block; vertical-align: middle;">
+                <img src="images/logo.png" alt="STACKLY Logo" style="height: 40px; width: auto;">
+            </div>
+            <span style="color: #FFFF66; font-weight: 800; font-size: 1.5rem; letter-spacing: 1px; margin-left: 10px; vertical-align: middle;">STACKLY</span>
+            <span class="badge badge-active" id="displayName" style="margin-left: 10px;">ADMIN</span>
+        </a>
+        <div class="topbar-actions">
+            <span id="displayEmail" style="color: var(--primary); font-weight: 500; font-size: 0.95rem;"></span>
+            <button class="btn btn-primary" onclick="handleLogout()" style="padding: 8px 15px; font-size: 1rem;" title="Logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+
+
+
+
+            <ul class="sidebar-nav">
+                <li><a href="admin_dashboard.html" data-page="overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</a></li>
+                <li><a href="404.html" data-page="users"><i class="fa-solid fa-users"></i> Users</a></li>
+                <li><a href="404.html" data-page="analytics"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="404.html" data-page="server"><i class="fa-solid fa-server"></i> Server Status</a></li>
+                <li><a href="404.html" data-page="settings"><i class="fa-solid fa-gear"></i> System Settings</a></li>
+
+            </ul>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main" data-aos="fade-up" data-aos-delay="100">
+            <div class="dashboard-header">
+                <h1 class="premium-title">System <span class="gradient-text">Overview</span></h1>
+                <p>Monitor your platform's performance and users.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card admin-stat-card">
+                    <div class="stat-icon admin-stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>8,432</h3>
+                        <p>Total Users</p>
+                    </div>
+                </div>
+                <div class="stat-card admin-stat-card">
+                    <div class="stat-icon admin-stat-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div class="stat-info">
+                        <h3>14.2K</h3>
+                        <p>Daily Visitors</p>
+                    </div>
+                </div>
+                <div class="stat-card admin-stat-card">
+                    <div class="stat-icon admin-stat-icon"><i class="fa-solid fa-server"></i></div>
+                    <div class="stat-info">
+                        <h3>99.9%</h3>
+                        <p>Server Uptime</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Management Table -->
+            <h3 class="dashboard-section-title"><i class="fa-solid fa-users-gear"></i> Recent Registrations</h3>
+            <div class="admin-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Joined</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#USR-0941</td>
+                            <td>Sarah Connor</td>
+                            <td>sarah@example.com</td>
+                            <td><span class="badge badge-active">Active</span></td>
+                            <td>Just now</td>
+                            <td>
+                                <a href="404.html" class="action-btn" style="text-decoration:none;"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="404.html" class="action-btn delete" style="text-decoration:none;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#USR-0940</td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                            <td>2 hours ago</td>
+                            <td>
+                                <a href="404.html" class="action-btn" style="text-decoration:none;"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="404.html" class="action-btn delete" style="text-decoration:none;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#USR-0939</td>
+                            <td>Mike Ross</td>
+                            <td>mike@example.com</td>
+                            <td><span class="badge badge-banned">Banned</span></td>
+                            <td>Yesterday</td>
+                            <td>
+                                <a href="404.html" class="action-btn" style="text-decoration:none;"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="404.html" class="action-btn delete" style="text-decoration:none;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#USR-0938</td>
+                            <td>Emily Chen</td>
+                            <td>emily@example.com</td>
+                            <td><span class="badge badge-active">Active</span></td>
+                            <td>Yesterday</td>
+                            <td>
+                                <a href="404.html" class="action-btn" style="text-decoration:none;"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="404.html" class="action-btn delete" style="text-decoration:none;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- No standard footer on dashboard -->
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+
+        // Load user info on dashboard load
+        window.onload = function() {
+            const name = localStorage.getItem('userName');
+            const email = localStorage.getItem('userEmail');
+            
+            if (name) {
+                document.getElementById('displayName').innerText = name.toUpperCase();
+            } else {
+                document.getElementById('displayName').innerText = 'ADMIN';
+            }
+            
+            if (email) {
+                document.getElementById('displayEmail').innerText = email;
+            }
+        };
+
+        // Logout function
+        function handleLogout() {
+            localStorage.removeItem('userEmail');
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+
+</html>
