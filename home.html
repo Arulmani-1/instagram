@@ -65,28 +65,28 @@
                 <div class="bento-grid">
                     
                     <div class="bento-item bento-1 glass-card fade-right floating">
-                        <img src="images/bento-feed.png" class="bento-bg" alt="Intelligent Feed">
+                        <img src="images/bento-feed.png" class="bento-bg" alt="Intelligent Feed" style="pointer-events: none;">
                         <div class="bento-icon">S</div>
                         <h3>Intelligent Feed</h3>
                         <p>Our proprietary algorithm surfaces the most relevant enterprise discussions, thought leadership, and media.</p>
                     </div>
 
                     <div class="bento-item bento-2 glass-card fade-left floating" style="animation-delay: -2s;">
-                        <img src="images/bento-creator.png" class="bento-bg" alt="Creator Suite">
+                        <img src="images/bento-creator.png" class="bento-bg" alt="Creator Suite" style="pointer-events: none;">
                         <div class="bento-icon">C</div>
                         <h3>Creator Suite</h3>
                         <p>Publish beautiful articles, manage your portfolio, and monetize your audience.</p>
                     </div>
 
                     <div class="bento-item bento-3 glass-card fade-up floating" style="animation-delay: -4s;">
-                        <img src="images/bento-b2b.png" class="bento-bg" alt="B2B Hub">
+                        <img src="images/bento-b2b.png" class="bento-bg" alt="B2B Hub" style="pointer-events: none;">
                         <div class="bento-icon">B</div>
                         <h3>B2B Hub</h3>
                         <p>Dedicated networking spaces.</p>
                     </div>
 
                     <div class="bento-item bento-4 glass-card fade-up floating" style="animation-delay: -1s;">
-                        <img src="images/bento-secure.png" class="bento-bg" alt="Secure Chat">
+                        <img src="images/bento-secure.png" class="bento-bg" alt="Secure Chat" style="pointer-events: none;">
                         <div class="bento-icon">M</div>
                         <h3>Secure Chat</h3>
                         <p>E2E encrypted messaging.</p>
@@ -259,7 +259,7 @@
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-image');
             const closeModal = document.querySelector('.close-modal');
-            const imageWrappers = document.querySelectorAll('.card-image-wrapper');
+            const imageWrappers = document.querySelectorAll('.card-image-wrapper, .bento-item');
 
             imageWrappers.forEach(wrapper => {
                 wrapper.addEventListener('click', () => {
