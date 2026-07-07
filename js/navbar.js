@@ -72,7 +72,7 @@
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
         const itemPath = item.getAttribute('href');
-        if (currentPath === itemPath || (currentPath === 'index.html' && itemPath === 'home.html')) {
+        if (currentPath === itemPath || (currentPath === 'index.html' && itemPath === 'index.html')) {
             item.classList.add('active');
         } else {
             item.classList.remove('active');
@@ -83,7 +83,7 @@
     const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
     mobileNavItems.forEach(item => {
         const itemPath = item.getAttribute('href');
-        if (itemPath && (currentPath === itemPath || (currentPath === 'index.html' && itemPath === 'home.html'))) {
+        if (itemPath && (currentPath === itemPath || (currentPath === 'index.html' && itemPath === 'index.html'))) {
             item.classList.add('active-link');
         } else {
             item.classList.remove('active-link');

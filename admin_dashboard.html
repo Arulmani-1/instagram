@@ -24,7 +24,7 @@
     <!-- Dashboard Topbar -->
     <header class="dashboard-topbar">
         <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
-        <a href="home.html" class="topbar-logo" style="text-decoration: none; display: flex; align-items: center;">
+        <a href="javascript:void(0)" class="topbar-logo" style="text-decoration: none; display: flex; align-items: center; cursor: default;">
             <div style="width: 26px; height: 40px; overflow: hidden; display: inline-block; vertical-align: middle;">
                 <img src="images/logo.png" alt="STACKLY Logo" style="height: 40px; width: auto;">
             </div>
@@ -180,7 +180,7 @@
         // Logout function
         function handleLogout() {
             localStorage.removeItem('userEmail');
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
         }
     </script>
 </body>

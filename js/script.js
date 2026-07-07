@@ -14,7 +14,10 @@ async function loadComponents() {
         const navbarResponse = await fetch('navbar.html' + cacheBuster);
         if (navbarResponse.ok) {
             const navbarHtml = await navbarResponse.text();
-            document.getElementById('navbar-placeholder').innerHTML = navbarHtml;
+            const navbarPlaceholder = document.getElementById('navbar-placeholder');
+            if (navbarPlaceholder) {
+                navbarPlaceholder.innerHTML = navbarHtml;
+            }
             // Load Navbar Specific JS & CSS
             const navScript = document.createElement('script');
             navScript.src = 'js/navbar.js' + cacheBuster;
