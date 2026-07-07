@@ -119,7 +119,10 @@
                             <img src="https://i.pravatar.cc/150?img=33" alt="User">
                             <span>@creative_mind</span>
                         </div>
-                        <img src="images/post1.png" alt="Workspace" class="card-image">
+                        <div class="card-image-wrapper">
+                            <img src="images/post1.png" alt="Workspace" class="card-image">
+                            <div class="image-click-overlay"></div>
+                        </div>
                         <div class="card-actions">
                             <div class="action-left">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
@@ -138,7 +141,10 @@
                             <img src="https://i.pravatar.cc/150?img=47" alt="User">
                             <span>@travel_diaries</span>
                         </div>
-                        <img src="images/post2.png" alt="Travel" class="card-image">
+                        <div class="card-image-wrapper">
+                            <img src="images/post2.png" alt="Travel" class="card-image">
+                            <div class="image-click-overlay"></div>
+                        </div>
                         <div class="card-actions">
                             <div class="action-left">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
@@ -157,7 +163,10 @@
                             <img src="https://i.pravatar.cc/150?img=68" alt="User">
                             <span>@foodie_heaven</span>
                         </div>
-                        <img src="images/post3.png" alt="Food" class="card-image">
+                        <div class="card-image-wrapper">
+                            <img src="images/post3.png" alt="Food" class="card-image">
+                            <div class="image-click-overlay"></div>
+                        </div>
                         <div class="card-actions">
                             <div class="action-left">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
@@ -225,6 +234,12 @@
     <!-- Dynamic Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
     <script src="js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -234,6 +249,35 @@
                 icon.addEventListener('click', () => {
                     window.location.href = '404.html';
                 });
+            });
+
+            // Image Modal Logic
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            const closeModal = document.querySelector('.close-modal');
+            const imageWrappers = document.querySelectorAll('.card-image-wrapper');
+
+            imageWrappers.forEach(wrapper => {
+                wrapper.addEventListener('click', () => {
+                    const img = wrapper.querySelector('img');
+                    if (img) {
+                        modalImg.src = img.src;
+                        modal.classList.add('show');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
             });
         });
     </script>
