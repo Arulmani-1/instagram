@@ -2,7 +2,7 @@
     "liveServer.settings.advanceCustomBrowserCmdLine": "",
     "liveServer.settings.NoBrowser": false,
     "liveServer.settings.root": "/",
-    "liveServer.settings.file": "index.html",
+    "liveServer.settings.file": "home.html",
     "liveServer.settings.ignoreFiles": [
         ".vscode/**"
     ]
