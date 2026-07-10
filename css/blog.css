@@ -80,7 +80,7 @@
 
 .featured-image {
     height: 400px;
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop') center/cover;
+    background: url('../images/unsplash_1518770660439.webp') center/cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -140,7 +140,7 @@
     background-position: center;
 }
 
-.author-1 { background-image: url('https://i.pravatar.cc/150?img=47'); }
+.author-1 { background-image: url('../images/avatar_47.webp'); }
 
 .author-info h4 {
     font-size: 1rem;
@@ -179,10 +179,10 @@
     border-top-right-radius: 20px;
 }
 
-.img-1 { background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop'); }
-.img-2 { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop'); }
-.img-3 { background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop'); }
-.img-4 { background-image: url('https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop'); }
+.img-1 { background-image: url('../images/unsplash_1611162617474.webp'); }
+.img-2 { background-image: url('../images/unsplash_1451187580459.webp'); }
+.img-3 { background-image: url('../images/unsplash_1552664730.webp'); }
+.img-4 { background-image: url('../images/unsplash_1616469829581.webp'); }
 
 .blog-content {
     padding: 1.5rem;

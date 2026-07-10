@@ -31,7 +31,7 @@
     margin: 0;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-    background: url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=2070&auto=format&fit=crop') center/cover;
+    background: url('../images/unsplash_1614729939124.webp') center/cover;
     -webkit-background-clip: text;
     background-clip: text;
     animation: backgroundPan 20s linear infinite;
